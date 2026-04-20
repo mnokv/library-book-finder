@@ -49,9 +49,10 @@
 - [x] Test input validation
 
 ## Documentation
-- [ ] Write user stories
-- [ ] Create UML diagrams (use case, class, ER)
-- [ ] Document security features
-- [ ] Document dependability features
-- [ ] Create sprint reports
-- [ ] Write test cases documentation
+- [x] Write user stories
+- [x] Create UML diagrams (use case, class, ER)
+- [x] Document security features
+- [x] Document dependability features
+- [x] Create sprint reports
+- [x] Write test cases documentation
+- [x] Create final project report
