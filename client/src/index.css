@@ -175,3 +175,22 @@
     }
   }
 }
+.status-badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-approved {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-returned {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-rejected {
+  @apply bg-red-100 text-red-800;
+}

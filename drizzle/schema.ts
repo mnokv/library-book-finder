@@ -25,4 +25,33 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+export const books = mysqlTable("books", {
+  id: int("id").autoincrement().primaryKey(),
+  title: varchar("title", { length: 255 }).notNull(),
+  author: varchar("author", { length: 255 }).notNull(),
+  category: varchar("category", { length: 100 }).notNull(),
+  description: text("description"),
+  isbn: varchar("isbn", { length: 20 }).unique(),
+  totalCopies: int("totalCopies").default(1).notNull(),
+  availableCopies: int("availableCopies").default(1).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Book = typeof books.$inferSelect;
+export type InsertBook = typeof books.$inferInsert;
+
+export const borrowRequests = mysqlTable("borrowRequests", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id),
+  bookId: int("bookId").notNull().references(() => books.id),
+  status: mysqlEnum("status", ["pending", "approved", "returned", "rejected"]).default("pending").notNull(),
+  requestDate: timestamp("requestDate").defaultNow().notNull(),
+  approvalDate: timestamp("approvalDate"),
+  returnDate: timestamp("returnDate"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type BorrowRequest = typeof borrowRequests.$inferSelect;
+export type InsertBorrowRequest = typeof borrowRequests.$inferInsert;
