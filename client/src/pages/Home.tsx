@@ -11,11 +11,10 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <nav className="border-b border-slate-200 bg-white">
         <div className="container flex items-center justify-between py-4">
-          <div className="text-2xl font-bold text-slate-900">Library Book Finder</div>
-          <div className="flex gap-4">
-            {isAuthenticated ? (
+          <h1 className="text-2xl font-bold text-slate-900">Library Book Finder</h1>
+          <div className="flex items-center gap-4">
+            {isAuthenticated && (
               <>
-                <span className="text-sm text-slate-600">Welcome, {user?.name}</span>
                 <Button variant="outline" onClick={() => navigate("/dashboard")}>
                   Dashboard
                 </Button>
@@ -25,10 +24,6 @@ export default function Home() {
                   </Button>
                 )}
               </>
-            ) : (
-              <Button onClick={() => (window.location.href = getLoginUrl())}>
-                Sign In
-              </Button>
             )}
           </div>
         </div>
