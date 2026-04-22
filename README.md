@@ -117,7 +117,7 @@ pnpm install
 DATABASE_URL=mysql://user:password@localhost/library_db
 JWT_SECRET=your_secret_key
 VITE_APP_ID=your_oauth_app_id
-OAUTH_SERVER_URL=https://api.manus.im
+OAUTH_SERVER_URL=https://api.example.com
 ```
 
 4. Run database migrations:
