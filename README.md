@@ -287,18 +287,6 @@ Important events are logged to the console:
 
 ---
 
-## Documentation
-
-Complete project documentation is available in:
-- `COMPLETE_PROJECT_REPORT.md` - Full project report with all sections
-- `USER_STORIES.md` - Detailed user stories
-- `UML_DIAGRAMS.md` - System design diagrams
-- `TEST_CASES.md` - Test case documentation
-- `SECURITY_DEPENDABILITY.md` - Security analysis
-- `SPRINT_REPORTS.md` - Sprint progress reports
-
----
-
 ## License
 
 This project is submitted as coursework for CSC 1405.
